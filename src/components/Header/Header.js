@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import "./Header.scss"
 import classnames from "classnames"
-import Logo from "../../assets/apelvil-origin.svg"
+import Logo from "../Logo/Logo"
+import { toggleMenu } from "../../state/app"
+import { connect } from "react-redux"
 
-function Header() {
+function Header({ isMenuOpened, dispatch }) {
   const [changed, setChanged] = useState(false)
 
   useEffect(() => {
@@ -23,9 +25,7 @@ function Header() {
       })}
     >
       <div className="header__logo">
-        <Link to="/" className="header__logo--link">
-          <Logo />
-        </Link>
+        <Logo />
       </div>
       <nav
         className={classnames("nav", {
@@ -43,7 +43,10 @@ function Header() {
         <div className="nav__item">Про нас</div>
         <div className="nav__item">Контакты</div>
       </nav>
-      <div className="header__menu-button">
+      <div
+        className="header__menu-button"
+        onClick={() => dispatch(toggleMenu(!isMenuOpened))}
+      >
         <span>меню</span>
         <div className="circle"></div>
       </div>
@@ -51,4 +54,9 @@ function Header() {
   )
 }
 
-export default Header
+export default connect(
+  state => ({
+    isMenuOpened: state.app.isMenuOpened,
+  }),
+  null
+)(Header)

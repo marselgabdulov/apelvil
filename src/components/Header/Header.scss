@@ -2,35 +2,26 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   margin: auto;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: inline-block;
   transition: all 0.5s ease-in-out;
   z-index: 1000;
   text-transform: uppercase;
   font-weight: bold;
+}
 
-  .header__logo {
-    svg {
-      height: auto;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: black;
-    }
-  }
+.header__logo {
+  position: absolute;
 }
 
 .header__menu-button {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   &:hover {
     cursor: pointer;
   }
@@ -46,7 +37,7 @@
 }
 
 .nav {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
@@ -76,21 +67,19 @@
     height: 80px;
     font-size: 9px;
 
-    .header__logo {
-      margin-left: 1.5em;
-      svg {
-        width: 3em;
-      }
+  }
 
-      .header__logo--link::after {
-        content: "Apelvil";
-      }
-    }
+  .header__logo {
+    font-size: 9px;
+    top: 3em;
+    left: 1.5em;
   }
 
   .header__menu-button {
-    margin-right: 2em;
+    font-size: 9px;
     width: 6em;
+    top: 3.75em;
+    right: 2em;
 
     .circle {
       width: 1em;
@@ -107,23 +96,19 @@
 @media (min-width: 768px) {
   .header {
     height: 80px;
+  }
+
+  .header__logo {
     font-size: 10px;
-
-    .header__logo {
-      margin-left: 1.5em;
-      svg {
-        width: 4em;
-      }
-
-      .header__logo--link::after {
-        content: "Apelvil";
-      }
-    }
+    top: 2em;
+    left: 1.5em;
   }
 
   .header__menu-button {
-    margin-right: 2em;
+    font-size: 10px;
     width: 6em;
+    top: 3.25em;
+    right: 2em;
 
     .circle {
       width: 1em;
@@ -142,21 +127,19 @@
     height: 80px;
     font-size: 12px;
 
-    .header__logo {
-      margin-left: 4em;
-      svg {
-        width: 5em;
-      }
+  }
 
-      .header__logo--link::after {
-        content: "Ваш IT Виддил";
-      }
-    }
+  .header__logo {
+    font-size: 12px;
+    top: 0.8em;
+    left: 0.5em;
   }
 
   .header__menu-button {
-    margin-right: 4em;
+    font-size: 12px;
     width: 6em;
+    top: calc(50% - 8px);
+    right: 1em;
 
     .circle {
       width: 1em;
@@ -166,6 +149,8 @@
 
   .nav {
     display: flex;
+    top: calc(50% - 8px);
+    left: calc(50% - 250px);
     width: 500px;
   }
 }
@@ -175,18 +160,19 @@
   .header {
     height: 80px;
     font-size: 12px;
+  }
 
-    .header__logo {
-      margin-left: 4em;
-      svg {
-        width: 5em;
-      }
-    }
+  .header__logo {
+    font-size: 12px;
+    top: 0.8em;
+    left: 4em;
   }
 
   .header__menu-button {
-    margin-right: 4em;
+    font-size: 12px;
     width: 6em;
+    top: calc(50% - 8px);
+    right: 5.5em;
 
     .circle {
       width: 1em;
@@ -195,6 +181,8 @@
   }
 
   .nav {
+    top: calc(50% - 8px);
+    left: calc(50% - 250px);
     width: 500px;
   }
 }
