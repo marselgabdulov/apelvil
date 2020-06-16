@@ -18,6 +18,9 @@ const Layout = ({ children }) => {
 
   return (
     <div className="layout">
+      <div className="turn">
+        <span>Будь ласка, переверніть</span>
+      </div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Menu />
       <main className="main">{children}</main>

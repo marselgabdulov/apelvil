@@ -5,7 +5,7 @@ html {
 }
 
 h1 {
-  font-family: 'Lora', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -20,4 +20,105 @@ body {
 
 .main {
   min-height: 100vh;
+}
+
+.turn {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #1a1a1a;
+  z-index: 1200;
+  display: none;
+
+  span {
+    font-size: 1.5em;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+
+// mobile
+@media (max-width: 599px) {
+  .turn {
+    display: none;
+  }
+
+  .main {
+    margin-top: 60px;
+  }
+}
+
+// mobile-landscape
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .turn {
+    display: block;
+  }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+  .turn {
+    display: none;
+  }
+
+  .main {
+    margin-top: 60px;
+  }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+  .turn {
+    display: none;
+  }
+
+  .main {
+    margin-top: 70px;
+  }
+}
+
+// laptop MD
+@media (min-width: 1200px) {
+  .turn {
+    display: none;
+  }
+
+  .main {
+    margin-top: 70px;
+  }
+}
+
+// laptop HD
+@media (min-width: 1440px) {
+  .turn {
+    display: none;
+  }
+
+  .main {
+    margin-top: 70px;
+  }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+  .turn {
+    display: none;
+  }
+
+  .main {
+    margin-top: 80px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
