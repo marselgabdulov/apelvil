@@ -1,0 +1,152 @@
+// MAIN
+.footer {
+    width: 100%;
+    background-color: #f6f6f6;
+}
+
+.footer__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.footer__menu {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.footer__section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section__title {
+    font-weight: bold;
+}
+
+.footer__link {
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    display: block !important;
+
+    &:hover {
+        color: #ec6c02;
+    }
+}
+
+.footer__copy {
+    position: absolute;
+}
+
+// mobile
+@media (max-width: 599px) {
+    .footer {
+        height: 4em;
+    }
+
+    .footer__menu {
+        display: none;
+    }
+}
+
+// tublet-portrait
+@media (min-width: 600px) {
+    .footer {
+        height: 4em;
+    }
+
+    .footer__menu {
+        display: none;
+    }
+}
+
+// tablet-landscape
+@media (min-width: 900px) {
+    .footer {
+        height: 40vh;
+    }
+
+    .footer__menu {
+        display: flex;
+    }
+
+    .footer__container {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .footer__section {
+        min-width: 20%;
+    }
+
+    .section__title {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    .footer__link {
+        margin-bottom: 0.5em;
+    }
+
+    .footer__copy {
+        bottom: 1em;
+        left: 0;
+    }
+}
+
+// laptop MD
+@media (min-width: 1200px) {
+    .footer {
+        height: 40vh;
+    }
+
+    .footer__container {
+        width: 94%;
+        margin-left: 3%;
+    }
+
+    .footer__copy {
+        bottom: 1em;
+        left: 0;
+    }
+}
+
+// laptop HD
+@media (min-width: 1440px) {
+    .footer {
+        height: 40vh;
+    }
+
+    .footer__container {
+        width: 86%;
+        margin-left: 7%;
+    }
+
+
+    .footer__copy {
+        bottom: 2em;
+        left: 0;
+    }
+}
+
+// desktop x-large
+@media (min-width: 1800px) {
+    .footer {
+        height: 40vh;
+    }
+
+    .footer__container {
+        width: 62%;
+        margin-left: 19%;
+    }
+
+    .footer__copy {
+        bottom: 2em;
+        left: 0;
+    }
+}
