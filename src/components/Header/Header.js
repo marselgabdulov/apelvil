@@ -14,9 +14,10 @@ function Header({ isMenuOpened, dispatch }) {
     <header className="header">
       <div className="header__wrapper">
         <div className="header__logo">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
-
         <div
           className="header__menu-button"
           onClick={() => dispatch(toggleMenu(!isMenuOpened))}
