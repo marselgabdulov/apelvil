@@ -65,7 +65,7 @@ function Header({ isMenuOpened, dispatch }) {
                 items={[
                   { name: "Service Desk", link: "service-desk" },
                   { name: "Консультування", link: "consulting" },
-                  { name: "розробка", link: "development" },
+                  { name: "Розробка", link: "development" },
                   { name: "інфраструктура", link: "infrastructure" },
                 ]}
               />
@@ -75,10 +75,10 @@ function Header({ isMenuOpened, dispatch }) {
             <Link to="/blog">Блог</Link>
           </div>
           <div className="nav__item">
-            <Link to="/blog">Вакансии</Link>
+            <Link to="/jobs">Вакансії</Link>
           </div>
           <div className="nav__item">
-            <Link to="/blog">Контакты</Link>
+            <Link to="/contacts">Контакти</Link>
           </div>
         </nav>
       </div>
