@@ -6,12 +6,9 @@
    viewBox="0 0 210 210"
    height="210mm"
    width="210mm">
-  <defs
-     id="defs2" />
+  <defs id="defs2" />
   <sodipodi:namedview
-     
      showgrid="true"
-     
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
@@ -28,9 +25,7 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     id="layer1"
-    
+  <g id="layer1">
     <path
        transform="scale(0.26458333)"
        d="M 120 40 L 40 120 L 320 400 L 40 680 L 120 760 L 400 480 L 680 760 L 760 680 L 480 400 L 760 120 L 680 40 L 400 320 L 120 40 z "
