@@ -5,7 +5,7 @@ import Subnav from "./Subnav/Subnav"
 import classnames from "classnames"
 import Logo from "../../assets/apelvil-text-black.svg"
 import OpenMenu from "../../assets/open-menu.svg"
-// import CloseMenu from "../../assets/close-menu.svg"
+import CloseMenu from "../../assets/close-menu.svg"
 import { toggleMenu } from "../../state/app"
 import { connect } from "react-redux"
 
@@ -21,7 +21,7 @@ function Header({ isMenuOpened, dispatch }) {
           className="header__menu-button"
           onClick={() => dispatch(toggleMenu(!isMenuOpened))}
         >
-          <OpenMenu />
+          {isMenuOpened ? <CloseMenu /> : <OpenMenu />}
         </div>
 
         <nav className="header__nav">

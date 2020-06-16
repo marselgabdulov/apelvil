@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Menu from "./Menu/Menu"
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
 import "./layout.scss"
@@ -17,13 +17,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="layout">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </>
+      <Menu />
+      <main className="main">{children}</main>
+    </div>
   )
 }
 
